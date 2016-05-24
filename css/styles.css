@@ -1,0 +1,630 @@
+@charset "utf-8";
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+
+/* Globals */
+* { box-sizing: border-box; margin: 0; }
+body { font-family: 'Karla', sans-serif; font-size: 16px; background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url(../assets/bg.jpg) no-repeat; background-attachment: fixed; background-size: cover; }
+a { text-decoration: none; color: inherit; }
+p { margin: 10px 0; }
+.c { clear:both; }
+section { width: 100%; }
+
+.wrap {
+	width: 100%;
+	max-width: 1300px;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* top section */
+.rog { 
+	width: 500px;
+	max-width: 100%;
+	display: block;
+	padding: 20px 0 0 30px;
+}
+
+.callout {
+	float: left;
+	width: 75%;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+	margin: 80px auto;
+}
+
+.callout h1 {
+	font-size: 42px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.callout h2 {
+	font-size: 36px;
+	background-color: #f8b31f;	
+	display: inline;
+    padding: 6px 10px;
+    font-weight: 400;
+}
+
+.callout h2 span {
+	font-size: 44px;
+}
+
+.leslie {
+	float: right;
+	width: 25%;
+	margin-bottom: 10px;
+	margin-top: -120px;
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.outerbox { 
+	width: 220px;
+	margin: 0 auto;
+	display: block;
+}
+
+.leslieimg {
+	width: 220px;
+}
+
+.innerbox {
+	margin-top: -5px;
+	text-align: center;
+	background-color: #fff;
+	padding: 10px 5px;
+	font-weight: bold;
+}
+
+.innerbox p {
+	margin: 5px 0;
+}
+
+.name {
+	font-size: 20px;
+}
+
+.reg {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.phone { 
+	font-size: 18px;
+}
+
+.realtorlogos {
+	margin-top: 10px;
+}
+
+.eho {
+	width: 25px;
+    margin-right: 10px;
+}
+
+.link-callout {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: #c70303;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 15px auto;
+    display: block;
+}
+
+
+
+.link-callout a {
+    color: #fff;
+    text-decoration: underline;
+    font-style: italic;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* main section */
+
+.main {
+	padding: 0;
+}
+
+.main .radios {
+	/* position: absolute;
+	left: -10000px; */
+	display: none;
+}
+
+
+#FeaturedListings:focus ~ .tabs #featuredtab,
+#SearchtheMLS:focus ~ .tabs #searchtab,
+#AboutLeslie:focus ~ .tabs #abouttab,
+#Contact:focus ~ .tabs #contacttab {
+}
+
+.main .tab {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    background-color: #eee;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    cursor: pointer;
+    width: 22%;
+    margin: 0 1.35%;
+    text-align: center;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main .tab:hover {
+   
+}
+
+#FeaturedListings:checked ~ .tabs #featuredtab,
+#SearchtheMLS:checked ~ .tabs #searchtab,
+#AboutLeslie:checked ~ .tabs #abouttab,
+#Contact:checked ~ .tabs #contacttab {
+    background-color: #fff;
+    cursor: default;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.main .pages {
+    background-color: #fff;
+    padding: 15px;
+    z-index: 9;
+    margin-top: -1px;
+  	border: 1px solid #eee;
+}
+
+.main .page {
+    display: none;
+}
+
+#FeaturedListings:checked ~ .pages #featuredpage,
+#SearchtheMLS:checked ~ .pages #searchpage,
+#AboutLeslie:checked ~ .pages #aboutpage,
+#Contact:checked ~ .pages #contactpage {
+    display: block;
+}
+
+.main h3 {
+	background-color: #c70303;
+	border-bottom: 3px solid #ac0000;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 15px 7px 30px;
+	margin: 10px 0 25px -30px;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.cards {
+	-ms-display: flex;
+	-ms-justify-content:space-around;
+  	-ms-flex-flow: wrap;
+
+	-webkit-display: flex;
+	-webkit-justify-content:space-around;
+  	-webkit-flex-flow: wrap;
+	
+	display:flex;
+	justify-content:space-around;
+	flex-flow: wrap;
+
+	width: 100%;
+	max-width: 1300px;
+	margin: auto;
+}
+
+.card {
+	position: relative;
+	width: 375px;
+	margin: 20px 10px;
+	max-width: 100%;
+}
+
+.card .cardpic {
+	display: none; 
+	width: 375px; 
+	max-width: 100%;
+	opacity: 0;
+}
+
+.card .cardpic.active {
+	display: block;
+	opacity: 1;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.card .dots {
+	height: 20px;
+	margin-top: -20px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.card .dots img {
+	display: inline;
+	width: 14px;
+	opacity:.8;
+	cursor: pointer;
+}
+
+.card .dots img.active, .card .dots img:hover {
+	opacity: 1;
+}
+
+.info {
+	background-color: #4a525d;
+	color: #fff;
+	padding: 10px 10px 0 10px;
+	height: 200px;
+	position: relative;
+}
+
+.info1 {
+	position: relative;
+	height: 100%;
+}
+
+.info1 ul {
+	padding-left: 10px;
+}
+
+.info1 li {
+	font-size: 16px;
+	line-height: 26px;
+	list-style-type: none;
+}
+
+.info2 {
+	display: none;
+}
+
+.info1 .address {
+	font-size: 15px;
+}
+
+.info1 .address:before {
+	background:url(../assets/house.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    content: " ";
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+.info1 .size:before {
+	content: " ";
+	background:url(../assets/size.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display:inline-block;
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+.info1 .bedrooms:before {
+	background:url(../assets/bed.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    content: " ";
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+.info1 .bathrooms:before {
+	background:url(../assets/bath.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    content: " ";
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+
+.info1 .mls:before {
+	background:url(../assets/number.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    content: " ";
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.bottom a {
+	margin-left: -10px;
+	padding: 0 10px;
+	background-color: #6b6b6c;
+	float: left;
+	line-height: 44px;
+	position: absolute;
+	bottom: 0;
+}
+
+.bottom a:hover {
+	background-color: #7b7b7c;
+}
+
+.bottom .price {
+	margin: 5px 0 5px 5px;
+	float: right;
+	font-size: 32px;
+	color: #f8b31f;
+}
+
+.info2 {
+	height: 138px;
+	overflow-y: auto;
+}
+
+.info2 .bottom a {
+	margin-left: 0;
+}
+
+.info2 p {
+	padding-left: 10px;
+    margin: 2px 5px 0 0;
+}
+
+.info2 .bottom .price {
+    margin-right: 10px;
+}
+
+#aboutpage p {
+	font-size: 21px;
+	line-height: 25px;
+	padding: 0 50px;
+	margin: 15px 0;
+}
+
+#aboutpage ul {
+	margin-bottom: 20px;
+}
+
+#aboutpage li {
+	list-style-type: none;
+	line-height: 28px;
+	font-size: 21px;
+	padding: 0 50px;
+}
+
+#aboutpage li:before {
+	background:url(../assets/star.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    content: " ";
+    padding-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+blockquote {
+	font-size: 21px;
+	line-height: 28px;
+	padding: 20px 20px 12px 20px;
+	margin: 30px 50px;
+	background: #efefef;
+}
+
+cite {
+	float: right;
+	font-size: 24px;
+	color: #555;
+	margin-top: 22px;
+}
+
+cite:before {
+	background:url(../assets/bubble.png) no-repeat;
+    width:24px;
+    height:24px;
+    display:inline-block;
+    content: " ";
+    padding-right: 7px;
+    top: 5px;
+    position: relative;
+}
+
+#aboutpage p.recent {
+	font-size: 24px;
+}
+
+.buyingexpand, .sellingexpand {
+	cursor: pointer;
+	background: #ddd;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 1px 7px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.buyingmore, .sellingmore {
+	display: none;
+}
+
+#contactpage p {
+	font-size: 21px;
+	line-height: 25px;
+	padding: 0 50px 0 20px;
+	margin: 15px 0;
+}
+
+.contactleft {
+	float: left;
+	width: 50%;
+}
+
+.contactleft h1, .contactleft h2 {
+	font-size: 28px;
+	padding-left: 50px;
+}
+
+.contactleft h1 {
+	color: #ff0000;
+}
+
+.contactleft h2 {
+	font-size: 24px;
+}
+
+#contactpage  .contactleft p {
+	padding: 0 20px 0 50px;
+}
+
+.contactleft ul {
+	margin: 30px 50px;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.selling {
+	margin-top: 25px;
+}
+
+.contactform {
+	float: right;
+	width: 50%;
+}
+
+.contactform h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contactform form {
+	width: 300px;
+	max-width: 100%;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.contactform input, .contactform textarea {
+	width: 280px;
+	margin: 10px;
+	max-width: 100%;
+	height: 26px;
+	font-size: 20px;		
+}
+
+.contactform textarea {
+	height: 75px;
+	margin-bottom: 0;
+}
+
+.contactform .submit-button {
+	width: 100px;
+	border: 0px;
+	height: 30px;
+    background: none;
+    border: 1px solid #aaa;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+}
+
+.required {
+	color: #ff0000;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+#contactpage label span {
+	color: #ff0000;
+}
+
+.mobilesearch {
+	display: none;
+}
+
+footer {
+	text-align: center;
+    padding: 10px;
+    color: #eee;
+}
+
+
+footer a:hover {
+	color: #5393BD
+}
+
+/* responsive */
+
+@media screen and (max-width: 1000px) {
+	.callout { width: 65%; }
+	.callout h1 { font-size: 28px; }
+    .callout h2 { font-size: 26px; }
+    .callout h2 span { font-size: 34px; } 
+    .leslie { width: 35%; }
+    .main .tab { width: 23.5%; margin: 0 .55%; }
+}
+
+@media screen and (max-width: 830px) {
+	.rog { margin: 0 auto; padding: 20px 0 0 0; }
+	.callout { width: 100%; float: none; margin: 20px auto 60px auto; }
+    .leslie { width: 100%; float: none; margin-top: -20px; }
+    .tabs { margin-left: 1%; }
+    .main .tab { width: 49%; margin: 0; border-top: 1px solid #fff;}
+    #aboutpage p, #aboutpage li { padding: 0 10px; }
+    #contactpage .contactleft p, .contactleft ul, .contactleft h1, .contactform h2 { padding: 0 10px;}
+    #aboutpage ul { padding-left: 0; }
+    blockquote { margin: 30px 10px; }
+    .contactleft, .contactform { float: none; width: 100%; }
+    #contactpage p { padding: 0 10px;}
+    .contactform { margin-top: 40px;}
+}
+
+@media screen and (max-width: 600px) {
+	.mobilesearch { display: block; }
+	.desktopsearch { display: none; }
+}
+
+@media screen and (max-width: 400px) {
+	.callout h1 { font-size: 24px; }
+	.callout h2 { font-size: 24px; }
+    .callout h2 span { font-size: 24px; } 
+    .main h3 { padding-left: 40px; }
+    .contactform input, .contactform textarea { width: 250px; }
+    .g-recaptcha { margin-left: 7px; }
+}
+
+@media screen and (max-width: 375px) {
+	.main .tab span { display: none; }
+	.info { height: 230px; }
+	.info2 { height: 176px; }
+	.bottom .price { font-size: 26px; }
+	.bottom a { line-height: 34px; }
+	.main .pages { padding: 5px; }
+}
