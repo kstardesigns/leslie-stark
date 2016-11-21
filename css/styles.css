@@ -147,8 +147,9 @@ section { width: 100%; }
 
 
 #FeaturedListings:focus ~ .tabs #featuredtab,
-#SearchtheMLS:focus ~ .tabs #searchtab,
+#BuySell:focus ~ .tabs #buyselltab,
 #AboutLeslie:focus ~ .tabs #abouttab,
+#Testimonials:focus ~ .tabs #testimonialstab,
 #Contact:focus ~ .tabs #contacttab {
 }
 
@@ -161,7 +162,7 @@ section { width: 100%; }
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     cursor: pointer;
-    width: 22%;
+    width: 17%;
     margin: 0 1.35%;
     text-align: center;
     z-index: 10;
@@ -174,8 +175,9 @@ section { width: 100%; }
 }
 
 #FeaturedListings:checked ~ .tabs #featuredtab,
-#SearchtheMLS:checked ~ .tabs #searchtab,
+#BuySell:checked ~ .tabs #buyselltab,
 #AboutLeslie:checked ~ .tabs #abouttab,
+#Testimonials:checked ~ .tabs #testimonialstabs,
 #Contact:checked ~ .tabs #contacttab {
     background-color: #fff;
     cursor: default;
@@ -197,8 +199,9 @@ section { width: 100%; }
 }
 
 #FeaturedListings:checked ~ .pages #featuredpage,
-#SearchtheMLS:checked ~ .pages #searchpage,
+#BuySell:checked ~ .pages #buysellpage,
 #AboutLeslie:checked ~ .pages #aboutpage,
+#Testimonials:checked ~ .pages #testimonialspage,
 #Contact:checked ~ .pages #contactpage {
     display: block;
 }
@@ -212,6 +215,10 @@ section { width: 100%; }
 	margin: 10px 0 25px -30px;
 	font-size: 30px;
 	font-weight: 400;
+}
+
+.featuredpage h3 {
+	clear: both;
 }
 
 
@@ -228,6 +235,7 @@ section { width: 100%; }
 	width: 560px;
 	height: 315px;
 	max-width: 100%;
+	float: none;
 
 }
 
@@ -273,16 +281,32 @@ section { width: 100%; }
 
 .card .dots {
 	height: 20px;
-	margin-top: -20px;
-	position: absolute;
-	text-align: center;
-	width: 100%;
+    margin-top: -25px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.card .dotblock {
+    display: block;
+    margin: 0 auto;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+}
+
+.card .dotblock.nine {
+	width: 170px;
+}
+
+.card .dotblock.six {
+	width: 114px;
 }
 
 .card .dots img {
 	display: inline;
 	width: 14px;
 	opacity:.8;
+	padding-top: 3px;
 	cursor: pointer;
 }
 
@@ -503,29 +527,29 @@ cite:before {
 	margin: 15px 0;
 }
 
-.contactleft {
-	float: left;
-	width: 50%;
+.buysell {
+	width: 100%;
+	padding: 0 50px;
 }
 
-.contactleft h1, .contactleft h2 {
+.buysell h1, .buysell h2 {
 	font-size: 28px;
-	padding-left: 50px;
 }
 
-.contactleft h1 {
+.buysell h1 {
 	color: #ff0000;
 }
 
-.contactleft h2 {
+.buysell h2 {
 	font-size: 24px;
 }
 
-#contactpage  .contactleft p {
-	padding: 0 20px 0 50px;
+#buysellpage  .buysell p {
+	padding: 0 20px 0 0;
+	font-size: 18px;
 }
 
-.contactleft ul {
+.buysell ul {
 	margin: 30px 50px;
     font-size: 21px;
     line-height: 25px;
@@ -536,8 +560,7 @@ cite:before {
 }
 
 .contactform {
-	float: right;
-	width: 50%;
+	width: 100%;
 }
 
 .contactform h2 {
@@ -603,26 +626,34 @@ footer a:hover {
 
 /* responsive */
 
+@media screen and (min-width: 1280px) {
+	.video-callout iframe { float: left; margin: 30px; }
+}
+
+@media screen and (max-width: 1180px) {
+	.main .tab { width: 19%; margin: 0 .35%; }
+}
+
 @media screen and (max-width: 1000px) {
 	.callout { width: 65%; }
 	.callout h1 { font-size: 28px; }
     .callout h2 { font-size: 26px; }
     .callout h2 span { font-size: 34px; } 
     .leslie { width: 35%; }
-    .main .tab { width: 23.5%; margin: 0 .55%; }
+    /*.main .tab { width: 23.5%; margin: 0 .55%; }*/
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 850px) {
 	.rog { margin: 0 auto; padding: 20px 0 0 0; }
 	.callout { width: 100%; float: none; margin: 20px auto 60px auto; }
     .leslie { width: 100%; float: none; margin-top: -20px; }
     .tabs { margin-left: 1%; }
     .main .tab { width: 49%; margin: 0; border-top: 1px solid #fff;}
     #aboutpage p, #aboutpage li { padding: 0 10px; }
-    #contactpage .contactleft p, .contactleft ul, .contactleft h1, .contactform h2 { padding: 0 10px;}
+    #contactpage .buysell p, .buysell ul, .buysell h1, .contactform h2 { padding: 0 10px;}
     #aboutpage ul { padding-left: 0; }
     blockquote { margin: 30px 10px; }
-    .contactleft, .contactform { float: none; width: 100%; }
+    .buysell, .contactform { float: none; width: 100%; padding: 0 15px; }
     #contactpage p { padding: 0 10px;}
     .contactform { margin-top: 40px;}
 }

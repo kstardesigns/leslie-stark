@@ -1,6 +1,3 @@
-
-
-
 $('.info1 .bottom a').click(function(e){
     e.preventDefault();
     $(this).closest('.info1').toggle();
