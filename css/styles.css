@@ -20,7 +20,7 @@ section { width: 100%; }
 
 
 /* top section */
-.rog { 
+.rog {
 	width: 500px;
 	max-width: 100%;
 	display: block;
@@ -44,7 +44,7 @@ section { width: 100%; }
 
 .callout h2 {
 	font-size: 36px;
-	background-color: #f8b31f;	
+	background-color: #f8b31f;
 	display: inline;
     padding: 6px 10px;
     font-weight: 400;
@@ -63,7 +63,7 @@ section { width: 100%; }
     padding-right: 10px;
 }
 
-.outerbox { 
+.outerbox {
 	width: 180px;
 	margin: 0 auto;
 	display: block;
@@ -98,7 +98,7 @@ section { width: 100%; }
 	line-height: 20px;
 }
 
-.phone { 
+.phone {
 	font-size: 18px;
 }
 
@@ -162,7 +162,7 @@ section { width: 100%; }
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     cursor: pointer;
-    width: 17%;
+    width: 22%;
     margin: 0 1.35%;
     text-align: center;
     z-index: 10;
@@ -171,13 +171,13 @@ section { width: 100%; }
 }
 
 .main .tab:hover {
-   
+
 }
 
 #FeaturedListings:checked ~ .tabs #featuredtab,
 #BuySell:checked ~ .tabs #buyselltab,
 #AboutLeslie:checked ~ .tabs #abouttab,
-#Testimonials:checked ~ .tabs #testimonialstabs,
+#Testimonials:checked ~ .tabs #testimonialstab,
 #Contact:checked ~ .tabs #contacttab {
     background-color: #fff;
     cursor: default;
@@ -247,7 +247,7 @@ section { width: 100%; }
 	-webkit-display: flex;
 	-webkit-justify-content:space-around;
   	-webkit-flex-flow: wrap;
-	
+
 	display:flex;
 	justify-content:space-around;
 	flex-flow: wrap;
@@ -265,8 +265,8 @@ section { width: 100%; }
 }
 
 .card .cardpic {
-	display: none; 
-	width: 375px; 
+	display: none;
+	width: 375px;
 	max-width: 100%;
 	opacity: 0;
 }
@@ -447,25 +447,26 @@ section { width: 100%; }
     margin-right: 10px;
 }
 
-#aboutpage p {
+#contactpage p {
 	font-size: 21px;
 	line-height: 25px;
 	padding: 0 50px;
 	margin: 15px 0;
 }
 
-#aboutpage ul {
+#contactpage ul {
 	margin-bottom: 20px;
+	padding-left: 10px;
 }
 
-#aboutpage li {
+#contactpage li {
 	list-style-type: none;
 	line-height: 28px;
 	font-size: 21px;
-	padding: 0 50px;
+	padding: 0;
 }
 
-#aboutpage li:before {
+#contactpage li:before {
 	background:url(../assets/star.png) no-repeat;
     width:16px;
     height:16px;
@@ -559,8 +560,27 @@ cite:before {
 	margin-top: 25px;
 }
 
+.contactform, .contactleft {
+	width: 50%;
+	float: left;
+}
+
 .contactform {
-	width: 100%;
+	margin-top: 15px;
+}
+
+.contactleft {
+	padding-left: 50px;
+}
+
+.contactleft .fb {
+	width: 110px;
+	margin: 0 0 -2px 5px;
+}
+
+.contactleft .facebook {
+	color: #4767aa;
+	text-align: center;
 }
 
 .contactform h2 {
@@ -582,7 +602,7 @@ cite:before {
 	margin: 10px;
 	max-width: 100%;
 	height: 26px;
-	font-size: 20px;		
+	font-size: 20px;
 }
 
 .contactform textarea {
@@ -630,17 +650,13 @@ footer a:hover {
 	.video-callout iframe { float: left; margin: 30px; }
 }
 
-@media screen and (max-width: 1180px) {
-	.main .tab { width: 19%; margin: 0 .35%; }
-}
-
 @media screen and (max-width: 1000px) {
 	.callout { width: 65%; }
 	.callout h1 { font-size: 28px; }
     .callout h2 { font-size: 26px; }
-    .callout h2 span { font-size: 34px; } 
+    .callout h2 span { font-size: 34px; }
     .leslie { width: 35%; }
-    /*.main .tab { width: 23.5%; margin: 0 .55%; }*/
+    .main .tab { width: 23.5%; margin: 0 .55%; }
 }
 
 @media screen and (max-width: 850px) {
@@ -653,7 +669,7 @@ footer a:hover {
     #contactpage .buysell p, .buysell ul, .buysell h1, .contactform h2 { padding: 0 10px;}
     #aboutpage ul { padding-left: 0; }
     blockquote { margin: 30px 10px; }
-    .buysell, .contactform { float: none; width: 100%; padding: 0 15px; }
+    .buysell, .contactform, .contactleft { float: none; width: 100%; padding: 0 15px; }
     #contactpage p { padding: 0 10px;}
     .contactform { margin-top: 40px;}
 }
@@ -667,7 +683,7 @@ footer a:hover {
 @media screen and (max-width: 400px) {
 	.callout h1 { font-size: 24px; }
 	.callout h2 { font-size: 24px; }
-    .callout h2 span { font-size: 24px; } 
+    .callout h2 span { font-size: 24px; }
     .main h3 { padding-left: 40px; }
     .contactform input, .contactform textarea { width: 250px; }
     .g-recaptcha { margin-left: 7px; }
