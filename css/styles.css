@@ -314,11 +314,25 @@ section { width: 100%; }
 	opacity: 1;
 }
 
+.videotour {
+	display: block;
+  text-align: center;
+  margin: 10px auto;
+  background-color: #fff;
+  color: #4a525d;
+  padding: 5px;
+  width: 150px;
+}
+
+.videotour:hover {
+	background-color: #ddd;
+}
+
 .info {
 	background-color: #4a525d;
 	color: #fff;
 	padding: 10px 10px 0 10px;
-	height: 200px;
+	height: 240px;
 	position: relative;
 }
 
@@ -430,7 +444,7 @@ section { width: 100%; }
 }
 
 .info2 {
-	height: 138px;
+	height: 155px;
 	overflow-y: auto;
 }
 
@@ -646,10 +660,6 @@ footer a:hover {
 
 /* responsive */
 
-@media screen and (min-width: 1280px) {
-	.video-callout iframe { float: left; margin: 30px; }
-}
-
 @media screen and (max-width: 1000px) {
 	.callout { width: 65%; }
 	.callout h1 { font-size: 28px; }
@@ -680,6 +690,10 @@ footer a:hover {
 	.video-callout iframe { width: 420px; height: 236px; }
 }
 
+@media screen and (max-width: 420px) {
+	.info { height: 270px; }
+}
+
 @media screen and (max-width: 400px) {
 	.callout h1 { font-size: 24px; }
 	.callout h2 { font-size: 24px; }
@@ -692,8 +706,6 @@ footer a:hover {
 
 @media screen and (max-width: 375px) {
 	.main .tab span { display: none; }
-	.info { height: 230px; }
-	.info2 { height: 176px; }
 	.bottom .price { font-size: 26px; }
 	.bottom a { line-height: 34px; }
 	.main .pages { padding: 5px; }
