@@ -685,8 +685,8 @@ footer a:hover {
 }
 
 @media screen and (max-width: 600px) {
-	.mobilesearch { display: block; }
-	.desktopsearch { display: none; }
+	/*.mobilesearch { display: block; }
+	.desktopsearch { display: none; }*/
 	.video-callout iframe { width: 420px; height: 236px; }
 }
 
