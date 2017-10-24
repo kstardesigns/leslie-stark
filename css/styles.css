@@ -658,6 +658,27 @@ footer a:hover {
 	color: #5393BD
 }
 
+/* superstition subfolder specific */
+.superstition .callout {
+	margin: 30px auto 60px;
+}
+
+.superstition .leslie {
+	margin-top: -170px;
+}
+
+.superstition .tabs {
+	display: none;
+}
+
+.superstition h2 {
+	margin: 40px auto;
+}
+
+.superstition h2 a {
+	color: #c70303;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1000px) {
