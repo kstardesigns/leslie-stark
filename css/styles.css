@@ -673,6 +673,7 @@ footer a:hover {
 
 .superstition h2 {
 	margin: 40px auto;
+	text-align: center;
 }
 
 .superstition h2 a {
@@ -703,6 +704,10 @@ footer a:hover {
     .buysell, .contactform, .contactleft { float: none; width: 100%; padding: 0 15px; }
     #contactpage p { padding: 0 10px;}
     .contactform { margin-top: 40px;}
+
+		.superstition .leslie {
+			margin-top: -30px;
+		}
 }
 
 @media screen and (max-width: 600px) {
@@ -723,6 +728,10 @@ footer a:hover {
     .contactform input, .contactform textarea { width: 250px; }
     .g-recaptcha { margin-left: 7px; }
     .video-callout iframe { width: 300px; height: 169px; }
+
+		.superstition h2 {
+      font-size: 20px;
+		}
 }
 
 @media screen and (max-width: 375px) {
