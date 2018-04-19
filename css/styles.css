@@ -46,8 +46,9 @@ section { width: 100%; }
 	font-size: 36px;
 	background-color: #f8b31f;
 	display: inline;
-    padding: 6px 10px;
-    font-weight: 400;
+  padding: 6px 10px;
+  font-weight: 400;
+	position: relative;
 }
 
 .callout h2 span {
@@ -56,19 +57,31 @@ section { width: 100%; }
 
 .callout h2.secondary {
 	position: relative;
+	background-color: #203eab;
+	width: 275px;
+  display: block;
+  margin: 20px auto;
+	padding: 30px 10px 10px;
+}
+
+.callout h2.secondary:hover {
+	background-color: #072592;
 }
 
 .callout h2.secondary a {
-	border-bottom: 2px solid #fff;
-	line-height: 63px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 h2.secondary::before {
-	content: 'OR';
+	content: 'Click here to';
     font-size: 16px;
     position: absolute;
-    left: 44%;
-    top: -8px;
+    left: calc(50% - 45px);
+    top: 12px;
     margin: 0 auto;
 }
 
