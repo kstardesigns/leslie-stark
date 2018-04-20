@@ -773,11 +773,18 @@ footer a:hover {
 
 @media screen and (max-width: 420px) {
 	.info { height: 270px; }
+	.buysell ul {
+		margin: 30px 20px;
+	}
+
+	.buysell h1 {
+		padding: 0;
+	}
 }
 
 @media screen and (max-width: 410px) {
 	.main .tab span { display: none; }
-	.main .tab span.slash { display: inline; }
+	.main .tab span.slash { display: inline !important; }
 }
 
 @media screen and (max-width: 400px) {
