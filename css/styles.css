@@ -201,6 +201,10 @@ h2.secondary::before {
     font-weight: bold;
 }
 
+.main .tab span.slash {
+	display: none;
+}
+
 .main .tab:hover {
 
 }
@@ -771,6 +775,11 @@ footer a:hover {
 	.info { height: 270px; }
 }
 
+@media screen and (max-width: 410px) {
+	.main .tab span { display: none; }
+	.main .tab span.slash { display: inline; }
+}
+
 @media screen and (max-width: 400px) {
 	.callout h1 { font-size: 24px; }
 	.callout h2 { font-size: 24px; }
@@ -786,7 +795,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 375px) {
-	.main .tab span { display: none; }
 	.bottom .price { font-size: 26px; }
 	.bottom a { line-height: 34px; }
 	.main .pages { padding: 5px; }
