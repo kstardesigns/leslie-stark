@@ -337,6 +337,10 @@ h2.secondary::before {
 	width: 114px;
 }
 
+.card .dotblock.seven {
+	width: 130px;
+}
+
 .card .dots img {
 	display: inline;
 	width: 14px;
