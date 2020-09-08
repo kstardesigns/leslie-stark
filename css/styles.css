@@ -330,16 +330,24 @@ h2.secondary::before {
     border-radius: 10px;
 }
 
-.card .dotblock.nine {
-	width: 170px;
-}
-
 .card .dotblock.six {
 	width: 114px;
 }
 
 .card .dotblock.seven {
 	width: 130px;
+}
+
+.card .dotblock.eight {
+	width: 150px;
+}
+
+.card .dotblock.nine {
+	width: 170px;
+}
+
+.card .dotblock.eleven {
+	width: 202px;
 }
 
 .card .dots img {
