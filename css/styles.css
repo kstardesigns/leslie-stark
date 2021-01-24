@@ -463,6 +463,11 @@ h2.secondary::before {
     position: relative;
 }
 
+.info1 p {
+	padding-left: 10px;
+    margin: 12px 5px 0 0;
+}
+
 .bottom {
 	position: absolute;
 	bottom: 0;
