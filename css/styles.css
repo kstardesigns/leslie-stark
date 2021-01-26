@@ -746,11 +746,13 @@ footer a:hover {
     text-shadow: 2px 2px 10px rgba(0,0,0,.9);
 } */
 
-.imageblock.sold {
+.imageblock.sold,
+.imageblock.comingsoon {
 	position: relative;
 }
 
-.imageblock.sold:before {
+.imageblock.sold:before,
+.imageblock.comingsoon:before {
     content: 'SOLD';
     position: absolute;
     top: calc(50% - 38px);
@@ -765,7 +767,14 @@ footer a:hover {
     text-shadow: 2px 2px 10px rgba(0,0,0,.9);
 }
 
-.imageblock.sold::after {
+.imageblock.comingsoon:before {
+	content: 'COMING SOON';
+    font-size: 40px;
+    top: calc(50% - 20px);
+}
+
+.imageblock.sold::after,
+.imageblock.comingsoon::after {
     content: '';
     position: absolute;
     top: 0;
