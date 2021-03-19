@@ -38,7 +38,10 @@ $Subject = "lesliestarkaz.com form submission";
 $Name = Trim(stripslashes($_POST['Name']));  
 $Phone = Trim(stripslashes($_POST['Phone'])); 
 $Email = Trim(stripslashes($_POST['Email']));
-$Message = Trim(stripslashes($_POST['Message'])); 
+$Message = Trim(stripslashes($_POST['Message']));
+$headers = 'From:' . $Email . "\r\n" .
+    'Reply-To:' . $Email . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
 // validation
 $validationOK=true;
@@ -64,7 +67,7 @@ $Body .= "\n";
 
 
 // send email 
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+$success = mail($EmailTo, $Subject, $Body, $headers);
 
 /* redirect to success page 
 if ($success){
