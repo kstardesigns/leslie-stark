@@ -748,12 +748,14 @@ footer a:hover {
 } */
 
 .imageblock.sold,
-.imageblock.comingsoon {
+.imageblock.comingsoon,
+.imageblock.undercontract {
 	position: relative;
 }
 
 .imageblock.sold:before,
-.imageblock.comingsoon:before {
+.imageblock.comingsoon:before,
+.imageblock.undercontract:before {
     content: 'SOLD';
     position: absolute;
     top: calc(50% - 38px);
@@ -774,8 +776,27 @@ footer a:hover {
     top: calc(50% - 20px);
 }
 
+.imageblock.undercontract:before {
+	content: 'UNDER CONTRACT';
+    font-size: 36px;
+    top: calc(50% - 20px);
+}
+
+@media screen and (max-width: 400px) {
+	.imageblock.undercontract:before {
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.imageblock.undercontract:before {
+		font-size: 26px;
+	}
+}
+
 .imageblock.sold::after,
-.imageblock.comingsoon::after {
+.imageblock.comingsoon::after,
+.imageblock.undercontract::after {
     content: '';
     position: absolute;
     top: 0;
