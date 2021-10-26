@@ -346,6 +346,10 @@ h2.secondary::before {
 	width: 170px;
 }
 
+.card .dotblock.ten {
+	width: 184px;
+}
+
 .card .dotblock.eleven {
 	width: 202px;
 }
