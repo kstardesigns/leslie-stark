@@ -375,6 +375,10 @@ h2.secondary::before {
 	width: 40px;
 }
 
+.card .dotblock.four {
+	width: 80px;
+}
+
 .card .dotblock.seven {
 	width: 130px;
 }
@@ -522,6 +526,15 @@ h2.secondary::before {
 	width: 18px;
 	height: 18px;
 	margin-top: 4px;
+}
+
+.info1 ul li.poolspa svg,
+.info1 ul li.garage svg,
+.info1 ul li.golf svg {
+	width: 14px;
+	height: 14px;
+	margin-left: 2px;
+	margin-top: 6px;
 }
 
 .bottom {
